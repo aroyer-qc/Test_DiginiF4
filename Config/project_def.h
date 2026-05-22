@@ -42,7 +42,7 @@ extern const char OUR_FIRMWARE_DIGINI_VERSION   [7];
 extern const char OUR_FIRMWARE_BUILD_DATE       [24];
 
 // Configurable value
-extern char OEM_VENDOR_NAME             [7];
+extern char OEM_VENDOR_NAME             [8];
 extern char OEM_MODEL_NAME              [16];
 extern char OEM_SERIAL_NUMBER           [SERIAL_NUMBER_SIZE];
 
