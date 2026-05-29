@@ -377,7 +377,7 @@
 		<Unit filename="..\Module\Digini\NanoIP\inc\lib_ethernet_enum.h" />
 		<Unit filename="..\Module\Digini\NanoIP\inc\Types\IP_frame_types.h" />
 		<Unit filename="..\Module\Digini\NanoIP\inc\Types\socket_types.h" />
-		<Unit filename="..\Module\Digini\NanoIP\src\Driver\Adapters\ETH_SM32_Adapter.cpp">
+		<Unit filename="..\Module\Digini\NanoIP\src\Driver\Adapters\ETH_STM32_Adapter.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\Module\Digini\NanoIP\src\Driver\MAC\lib_class_PHY_LAN8742A.cpp">
@@ -523,6 +523,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\Module\Digini\Utility\inc\lib_class_crc.h" />
+		<Unit filename="..\Module\Digini\Utility\inc\lib_delay.h" />
 		<Unit filename="..\Module\Digini\Utility\inc\lib_fifo.h" />
 		<Unit filename="..\Module\Digini\Utility\inc\lib_stacktistic.h" />
 		<Unit filename="..\Module\Digini\Utility\inc\lib_utility.h" />
@@ -538,6 +539,9 @@
 		<Unit filename="..\Module\Digini\Utility\src\lib_class_crc.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="..\Module\Digini\Utility\src\lib_delay.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="..\Module\Digini\Utility\src\lib_fast_memcpy.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -547,7 +551,7 @@
 		<Unit filename="..\Module\Digini\Utility\src\lib_stacktistic.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\Module\Digini\Utility\src\lib_time_and_delay.cpp">
+		<Unit filename="..\Module\Digini\Utility\src\lib_time.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\Module\Digini\Utility\src\port\STM32F4xx\lib_stacktistic_STM32F4.cpp">
@@ -613,8 +617,14 @@
 		<Extensions>
 			<code_completion />
 			<debugger>
+				<target_debugging_settings target="Debug F429">
+					<debug_interface description="STM32F429.svd" options="10" reg_filter="0" probe="STlink" device="auto" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="7" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset;" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
+				</target_debugging_settings>
 				<target_debugging_settings target="Debug F401">
 					<debug_interface description="STM32F429.svd" options="10" reg_filter="0" probe="STlink" device="auto" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="7" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset;" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
+				</target_debugging_settings>
+				<target_debugging_settings target="Release F427">
+					<debug_interface description="STM32F429.svd" options="10" reg_filter="0" probe="STlink" device="stm32.script" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="4" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset;" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
 				</target_debugging_settings>
 				<target_debugging_settings target="Release F429">
 					<debug_interface description="STM32F429.svd" options="10" reg_filter="0" probe="STlink" device="stm32.script" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="4" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset;" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
@@ -622,13 +632,7 @@
 				<target_debugging_settings target="Debug F427">
 					<debug_interface description="STM32F429.svd" options="10" reg_filter="0" probe="STlink" device="auto" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="7" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset;" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
 				</target_debugging_settings>
-				<target_debugging_settings target="Debug F429">
-					<debug_interface description="STM32F429.svd" options="10" reg_filter="0" probe="STlink" device="auto" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="7" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset;" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
-				</target_debugging_settings>
 				<target_debugging_settings target="Release F401">
-					<debug_interface description="STM32F429.svd" options="10" reg_filter="0" probe="STlink" device="stm32.script" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="4" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset;" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
-				</target_debugging_settings>
-				<target_debugging_settings target="Release F427">
 					<debug_interface description="STM32F429.svd" options="10" reg_filter="0" probe="STlink" device="stm32.script" speed="" bus_address="" serial="" defines="" scripts="" flash_size="" ram_size="" vcc_voltage="" verbose="4" unwind="2" rstType="0" use_jtag="false" disable_cache="false" enable_semi="false" close_eblink="false" gdb_reset="" gdb_reset_remote="reset;" gdb_before_conn="" gdb_after_conn="" use_remote="false" ip_address="" ip_port="" path="" executable="" start_server="false" arguments="" flash_verify="false" flash_run="false" />
 				</target_debugging_settings>
 			</debugger>
